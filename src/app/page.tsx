@@ -6,22 +6,22 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="space-4 flex flex-col">
-      <div className="flex justify-between items-center p-4 bg-white shadow-sm dark:bg-gray-800">
+    <div className="flex flex-col gap-4 max-w-xl mx-auto h-screen p-4 overflow-auto">
+      <div className="flex justify-between items-center bg-white rounded-md p-4">
         <Image src="/logo.svg" alt="logo" width={100} height={100} />
-      <ModeToggle />
+        <div className="flex gap-4">
+          <Button size="sm" variant="outline"
+          >Oxigeno</Button>
+          <Button size="sm" variant="secondary"
+          >CO2</Button>
+          </div>
 
       </div>
-      <main className="p-4 space-y-4 flex flex-col md:flex-row md:space-x-5">
-        <section className="flex-1">
+      <div className="flex flex-col bg-white rounded-md p-4 gap-5">
       <ChartOxigen />
-
-        </section>
-        <section className="flex-1">
-
       <Roberts questionId="1" />
-        </section>
-      </main>
+
+      </div>
     </div>
   )
 }

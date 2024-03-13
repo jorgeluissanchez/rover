@@ -7,13 +7,13 @@ import { AreaChart } from '@tremor/react';
 export function AreaChartOxigen({chartdata}: any) {
   return (
     <AreaChart
-      className="h-80"
+      className="h-64"
       data={chartdata}
       index="date"
       categories={['SemiAnalysis', 'The Pragmatic Engineer']}
       colors={['indigo', 'rose']}
       valueFormatter={dataFormatter}
-      yAxisWidth={60}
+      yAxisWidth={50}
       onValueChange={(v: any) => console.log(v)}
     />
   );

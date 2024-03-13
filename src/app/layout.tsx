@@ -24,18 +24,11 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen font-sans antialiased",
+          "min-h-screen font-sans w-full",
           fontSans.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
           {children}
-        </ThemeProvider>
       </body>
     </html>
   );
