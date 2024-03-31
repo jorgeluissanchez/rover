@@ -38,7 +38,7 @@ export default function Home() {
     };
   }, []);
   return (
-    <div className="flex flex-col py-5 px-4 gap-4 max-w-5xl mx-auto h-fit">
+    <div className="flex flex-col py-5 px-4 gap-4 max-w-5xl mx-auto min-h-[120vh]">
       <div className="flex justify-between items-center bg-white rounded-md p-4">
         <Image src="/logo.svg" alt="logo" width={710} height={128} priority className="cursor-pointer w-[190px]" />
         <div className="flex flex-row space-x-2">

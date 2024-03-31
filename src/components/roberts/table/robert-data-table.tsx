@@ -44,32 +44,39 @@ export function RobertDataTable<TData, TValue>() {
     };
   }, []);
 
+  const handleFilter = () => {
+    console.log(time.dateStart, time.dateEnd)
+    socket.emit('read-db', 'all-db-data', {
+      startDate: time.dateStart,
+      endDate: time.dateEnd,
+    });
+  }
+
   return (
     <div className="space-y-4 w-full">
       
       <div className="flex flex-col md:flex-row gap-4 items-center">
           <DateTimePicker
             value={{
-              date: time.dateEnd,
+              date: time.dateStart,
               hasTime: true
             }} onChange={(date) => {
               setTime((prev) => ({
                 ...prev,
-                dateEnd: date.date,
+                dateStart: date.date,
               }));
             }} />
           <DateTimePicker value={{
             date: time.dateEnd,
             hasTime: true
           }} onChange={(date) => {
-            console.log(date.date)
             setTime((prev) => ({
               ...prev,
               dateEnd: date.date,
             }));
           }} />
           <Button onClick={() => {
-            socket.emit('start-stream', 'new-data');
+            handleFilter();
           }} className="w-full md:w-fit"
           >Filter</Button>
         </div>
