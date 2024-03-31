@@ -24,11 +24,11 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen font-sans w-full",
+          "relative h-screen font-sans w-screen bg-orange-950 overflow-hidden",
           fontSans.variable
-        )}
-      >
-          {children}
+        )}>
+        <div className="back"></div>
+        <div className="relative z-10 w-full h-full overflow-y-auto">{children}</div>
       </body>
     </html>
   );
