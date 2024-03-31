@@ -59,35 +59,3 @@ export default function Home() {
     </div>
   )
 }
-
-
-/*
-
-        <div className="flex space-x-2">
-          <AreaChart
-            className="h-64"
-            data={newData}
-            index="time"
-            categories={['Humidity', 'NH3', 'Temperature']}
-            colors={['indigo', 'rose', 'green']}
-            yAxisWidth={50}
-          />
-          <AreaChart
-            className="h-64"
-            data={newData}
-            index="time"
-            categories={['Pressure', 'CO2']}
-            colors={['yellow', 'violet']}
-            yAxisWidth={50}
-          />
-        </div>
-        {
-          newData.map((data: any) => {
-            return (
-              <p key={data.time}>
-                {data.time} - {data.CO2} - {data.NH3} - {data.Humidity} - {data.Temperature} - {data.Pressure}
-              </p>
-            )
-          })
-        }
-*/
